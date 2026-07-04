@@ -567,3 +567,33 @@ canvas{
     }
 
   }
+
+.themePreview{
+width:45px;
+height:45px;
+border-radius:12px;
+margin-right:12px;
+display:inline-block;
+vertical-align:middle;
+border:2px solid rgba(255,255,255,.15);
+}
+
+.previewNight{
+background:linear-gradient(#07131c,#000);
+}
+
+.previewLava{
+background:linear-gradient(#4b0000,#ff3b00);
+}
+
+.previewGalaxy{
+background:linear-gradient(#120024,#001144);
+}
+
+.previewSnow{
+background:linear-gradient(#dff7ff,#75bfff);
+}
+
+.previewForest{
+background:linear-gradient(#0b3d0b,#1b8b3d);
+   }
