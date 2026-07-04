@@ -26,8 +26,8 @@ function updateLanes(){
 // ================= SKINS =================
 let skins = {
   default: {color:"cyan", unlock:0},
-  fire: {color:"orange", unlock:50},
-  neon: {color:"lime", unlock:50},
+  fire: {color:"orange", unlock:600},
+  neon: {color:"lime", unlock:900},
 };
 
 // ================= SAVE =================
