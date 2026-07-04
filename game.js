@@ -30,15 +30,6 @@ let skins = {
   neon: {color:"lime", unlock:5000},
 };
 
-let themes = {
-    night:{ unlock:350},
-    lava:{ unlock:500},
-    galaxy:{ unlock:2000},
-    snow:{ unlock:3500},
-    forest:{ unlock:5000},
-};
-
-save.theme = save.theme || "night";
 // ================= SAVE =================
 let save = {
   skin: "default",
@@ -230,6 +221,7 @@ function selectSkin(skin){
   openShop();
 }
 
+//=====
 function openThemeShop(){
 
 let shop=document.getElementById("ThemeShop");
