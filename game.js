@@ -11,7 +11,7 @@ let bestScore = parseInt(localStorage.getItem("bestScore") || "0");
 function resize(){
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  player.y = canvas.height - 190;
+  player.y = canvas.height - 320;
   updateLanes();
 }
 window.addEventListener("resize", resize);
