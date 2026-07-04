@@ -20,7 +20,7 @@ window.addEventListener("resize", resize);
 let lanes = [];
 function updateLanes(){
   let center = canvas.width / 2;
-  lanes = [center - 120, center, center + 120];
+  lanes = [center - 120, center, center + 190];
 }
 
 // ================= SKINS =================
