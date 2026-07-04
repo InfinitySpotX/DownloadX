@@ -424,29 +424,6 @@ function update(){
 function draw(){
   ctx.clearRect(0,0,canvas.width,canvas.height);
 
-switch(save.theme){
-    
-case "lava":
-ctx.fillStyle="#2b0000";
-ctx.fillRect(0,0,canvas.width,canvas.height);
-break;
-case "galaxy":
-ctx.fillStyle="#120024";
-ctx.fillRect(0,0,canvas.width,canvas.height);
-break;
-case "snow":
-ctx.fillStyle="#dff7ff";
-ctx.fillRect(0,0,canvas.width,canvas.height);
-break;
-case "forest":
-ctx.fillStyle="#0b3d0b";
-ctx.fillRect(0,0,canvas.width,canvas.height);
-break;
-default:
-ctx.fillStyle="#07131c";
-ctx.fillRect(0,0,canvas.width,canvas.height);
-}
-
   if(state === "menu"){
     ctx.fillStyle = "cyan";
     ctx.font = "30px Arial";
