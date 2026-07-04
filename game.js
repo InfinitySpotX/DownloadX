@@ -342,7 +342,7 @@ function draw(){
     ctx.fillStyle = "cyan";
     ctx.font = "30px Arial";
     ctx.fillText("", 80, 200);
-    ctx.fillText("PRESS START", 120, 260);
+    ctx.fillText("", 120, 260);
     return;
   }
 
