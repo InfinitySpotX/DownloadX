@@ -232,7 +232,7 @@ function selectSkin(skin){
 
 function openThemeShop(){
 
-let shop=document.getElementById("themeShop");
+let shop=document.getElementById("ThemeShop");
 
 shop.classList.remove("hidden");
 
@@ -287,7 +287,7 @@ shop.innerHTML=html;
 
 function closeThemeShop(){
 
-document.getElementById("themeShop")
+document.getElementById("ThemeShop")
 .classList.add("hidden");
 
 }
