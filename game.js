@@ -11,7 +11,7 @@ let bestScore = parseInt(localStorage.getItem("bestScore") || "0");
 function resize(){
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  player.y = canvas.height - 120;
+  player.y = canvas.height - 190;
   updateLanes();
 }
 window.addEventListener("resize", resize);
@@ -20,7 +20,7 @@ window.addEventListener("resize", resize);
 let lanes = [];
 function updateLanes(){
   let center = canvas.width / 2;
-  lanes = [center - 120, center, center + 190];
+  lanes = [center - 120, center, center + 120];
 }
 
 // ================= SKINS =================
