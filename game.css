@@ -2,19 +2,6 @@
    INFINITY SPOT PREMIUM CSS
    PART 1
 =========================== */
-body{
-    margin:0;
-    overflow:hidden;
-    font-family:Arial,Helvetica,sans-serif;
-    background:#000;
-    color:#fff;
-
-    width:100vw;
-    height:100vh;
-
-    position:fixed;
-    inset:0;
-}
 *{
     margin:0;
     padding:0;
@@ -22,12 +9,24 @@ body{
 }
 
 body{
-    margin:0;
+    width:100%
+    height:100%
     overflow:hidden;
+   
     font-family:Arial,Helvetica,sans-serif;
     background:#000;
     color:#fff;
+   
+   padding:
+   env(safe-area-inset-top)
+   0
+   env(safe-area-inset-bottom)
+   0;
 }
+html, body{
+   width:100%;
+   height:100%;
+   overflow:hidden;
 
 /* ================= BACKGROUND ================= */
 
