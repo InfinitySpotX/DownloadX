@@ -30,6 +30,15 @@ let skins = {
   neon: {color:"lime", unlock:5000},
 };
 
+let themes = {
+    night:{ unlock:350},
+    lava:{ unlock:500},
+    galaxy:{ unlock:2000},
+    snow:{ unlock:3500},
+    forest:{ unlock:5000},
+};
+
+save.theme = save.theme || "night";
 // ================= SAVE =================
 let save = {
   skin: "default",
@@ -221,6 +230,83 @@ function selectSkin(skin){
   openShop();
 }
 
+function openThemeShop(){
+
+let shop=document.getElementById("themeShop");
+
+shop.classList.remove("hidden");
+
+let html="<h2>🎨 THEMES</h2>";
+
+for(let key in themes){
+
+let locked=bestScore<themes[key].unlock;
+
+let cls="previewNight";
+
+if(key=="lava") cls="previewLava";
+if(key=="galaxy") cls="previewGalaxy";
+if(key=="snow") cls="previewSnow";
+if(key=="forest") cls="previewForest";
+
+html+=`
+<div>
+
+<span class="themePreview ${cls}"></span>
+
+<b>${key.toUpperCase()}</b>
+
+<br><br>
+
+<button
+onclick="selectTheme('${key}')"
+${locked?"disabled":""}>
+
+${locked?
+themes[key].unlock+" 🔒":
+(save.theme==key?"SELECTED":"SELECT")}
+
+</button>
+
+</div>
+`;
+
+}
+
+html+=`
+<button
+class="shop-close-btn"
+onclick="closeThemeShop()">
+BACK
+</button>
+`;
+
+shop.innerHTML=html;
+
+}
+
+function closeThemeShop(){
+
+document.getElementById("themeShop")
+.classList.add("hidden");
+
+}
+
+function selectTheme(name){
+
+if(bestScore<themes[name].unlock)
+return;
+
+save.theme=name;
+
+localStorage.setItem(
+"runnerSave",
+JSON.stringify(save)
+);
+
+openThemeShop();
+
+}
 // ================= INPUT =================
 document.addEventListener("keydown", e=>{
   if(state !== "play") return;
@@ -337,6 +423,43 @@ function update(){
 // ================= DRAW =================
 function draw(){
   ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  switch(save.theme){
+
+case "lava":
+
+ctx.fillStyle="#2b0000";
+ctx.fillRect(0,0,canvas.width,canvas.height);
+
+break;
+
+case "galaxy":
+
+ctx.fillStyle="#120024";
+ctx.fillRect(0,0,canvas.width,canvas.height);
+
+break;
+
+case "snow":
+
+ctx.fillStyle="#dff7ff";
+ctx.fillRect(0,0,canvas.width,canvas.height);
+
+break;
+
+case "forest":
+
+ctx.fillStyle="#0b3d0b";
+ctx.fillRect(0,0,canvas.width,canvas.height);
+
+break;
+
+default:
+
+ctx.fillStyle="#07131c";
+ctx.fillRect(0,0,canvas.width,canvas.height);
+
+  }
 
   if(state === "menu"){
     ctx.fillStyle = "cyan";
