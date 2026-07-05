@@ -508,8 +508,8 @@ canvas {
 .playerShield{
 
     filter:
-        drop-shadow(0 0 12px cyan)
-        drop-shadow(0 0 30px cyan);
+        drop-shadow(0 0 42px cyan)
+        drop-shadow(0 0 70px cyan);
 
 }
 
